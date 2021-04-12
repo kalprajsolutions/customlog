@@ -3,8 +3,8 @@
     "description": "Create Custom log file name in laravel logs",
     "type": "library",
     "require": {
-        "monolog/monolog": "^2.x-dev",
-        "phpunit/phpunit": "^10.0.x-dev"
+        "monolog/monolog": "^2.2.0",
+        "phpunit/phpunit": "^9.5.4"
     },
     "autoload":{
       "psr-4": {
