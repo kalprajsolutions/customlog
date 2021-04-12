@@ -132,23 +132,10 @@ class Log
      */
     private static function getPath($name)
     {
-        $location = getenv('LOG_PATH');
-
         if (boolval(getenv('LOG_DATE')) !== false) {
-            $name .= '_'.date('Y-m-d');
+            return storage_path('logs/users/' . $name . '/' .date('Y-m-d'). '.log');
         }
 
-        if ($location == 'laravel' && function_exists('storage_path')) {
-            /**
-             * we are assuming that if you've set the log location to laravel
-             * then we have access to the laravel function.
-             */
-            return storage_path('logs/'.$name.'.log');
-        } elseif (!empty($location) && file_exists($location)) {
-            return $location.'/'.$name.'.log';
-        } else {
-            // @todo safer fallback directory
-            return __DIR__.'/../logs/'.$name.'.log';
-        }
+        return storage_path('logs/users/' . $name . '/' .date('Y-m-d'). 'laravel.log');
     }
 }
