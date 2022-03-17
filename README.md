@@ -16,14 +16,6 @@ PHP 7.1 or Later
 
 ## Installation
 
-Installation is a quick 3 step process:
-
-1. Download kalprajsolutions/customlog using composer
-
-### Step 1: Download kalprajsolutions/bitly using composer
-
-Add **kalprajsolutions/customlog** by executing the command:
-
 ```
 composer require kalprajsolutions/customlog
 ```
